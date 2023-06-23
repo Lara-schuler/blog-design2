@@ -2,8 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  
 }
 nav h1 {
   text-align: center;
@@ -16,22 +15,29 @@ nav h1 {
 .link_button {
   margin-top: 5px;
   padding: 0.7rem 3rem;
-  border: none;
+  border: 1px solid #008B8B;
   border-radius: 15px;
-  color: #212121;
+  color: #008B8B;
   background-color: #ffffff;
   font-weight: 1000;
   font-size: 12 px;
   cursor: pointer;
   transition: all 250ms;
 }
-.link_button:hover{
-  transform: scale(1.1);
+.link_button:hover {
+  border: #008B8B;
+  background-color: #008B8B;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .img_movie {
   width: 20%;
   margin: 0 40%;
+}
+
+main {
+  height: 800px;
 }
 
 .movie-desc {

@@ -5,13 +5,13 @@ import Navbar from '../../components/Navbar';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-function Home() {
+function Categorias() {
     const imagePath = "https://api-rest-post-diegocandido.herokuapp.com";
  
     const [movies, setMovies] = useState([]);
     
     useEffect(() => {
-        fetch(`https://api-rest-post-diegocandido.herokuapp.com/postagens`)
+        fetch(`https://api-rest-post-diegocandido.herokuapp.com/categorias`)
             .then((response) => response.json())
             .then((data) => {
                 setMovies(data);
@@ -23,7 +23,8 @@ function Home() {
         <Container>
             <Header />
             <Navbar />
-            <h1>Posts</h1>
+            <main>
+            <h1>Categorias</h1>
             <MovieList>
                 {movies.map((movie, index) => {
                     return (
@@ -42,10 +43,11 @@ function Home() {
                     );
                 })}
             </MovieList>
+            </main>
             <Footer />
         </Container>
     );
 }
 
-export default Home;
+export default Categorias;
 
